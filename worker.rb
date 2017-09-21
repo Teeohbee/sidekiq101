@@ -25,3 +25,20 @@ class OurWorker
     end
   end
 end
+
+class ErrorWorker
+  include Sidekiq::Worker
+
+  def perform(errored)
+    case errored
+    when true
+      puts "Charging credit card..."
+      raise "An error occured"
+    when false
+      puts "Charging credit card..."
+      puts "Payment was successful"
+    else
+      puts "You shouldn't be here"
+    end
+  end
+end
