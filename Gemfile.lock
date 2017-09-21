@@ -3,6 +3,7 @@ GEM
   specs:
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
+    mustermann (1.0.1)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -12,12 +13,20 @@ GEM
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (~> 3.3, >= 3.3.3)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
+    tilt (2.0.8)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  rack
   sidekiq
+  sinatra
 
 BUNDLED WITH
    1.15.3
