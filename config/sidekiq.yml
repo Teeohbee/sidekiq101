@@ -1,0 +1,4 @@
+:schedule:
+  what_is_this:
+    every: 30s
+    class: ScheduleWorker

@@ -1,4 +1,5 @@
 require 'sidekiq'
+require 'sidekiq-scheduler'
 
 Sidekiq.configure_client do |config|
   config.redis = { db: 1 }
@@ -40,6 +41,18 @@ class ErrorWorker
       puts "Payment was successful"
     else
       puts "You shouldn't be here"
+    end
+  end
+end
+
+class ScheduleWorker
+  include Sidekiq::Worker
+
+  JOBS = ['easy','hard','super_hard']
+
+  def perform()
+    JOBS.each do |job|
+      OurWorker.perform_async(job)
     end
   end
 end
