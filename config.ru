@@ -5,4 +5,5 @@ Sidekiq.configure_client do |config|
 end
 
 require 'sidekiq/web'
+require 'sidekiq-scheduler/web'
 run Sidekiq::Web

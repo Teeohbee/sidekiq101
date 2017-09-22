@@ -5,3 +5,4 @@ gem 'rack'
 gem 'sinatra'
 
 gem 'sidekiq-scheduler'
+gem 'pry'

@@ -1,11 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    coderay (1.1.1)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     et-orbi (1.0.5)
       tzinfo
+    method_source (0.8.2)
     mustermann (1.0.1)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -27,6 +33,7 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
+    slop (3.6.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
     tzinfo (1.2.3)
@@ -36,6 +43,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pry
   rack
   sidekiq
   sidekiq-scheduler
